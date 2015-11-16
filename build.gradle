@@ -1,0 +1,70 @@
+println 'Inicio ejecucion proyecto'
+
+apply plugin: 'java'
+apply plugin: 'jacoco'
+
+// Encoding con el que se compila
+[ compileJava, compileTestJava ]*.options*.encoding = 'ISO-8859-1'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile group:'com.google.code.gson', name: 'gson', version: '2.2.2' // Serializacion de datos
+	
+	// ***************** PRUEBAS AUTOMATIZADAS ***************** //
+	testCompile group: 'junit', name: 'junit', version: '4.+' // Construccion de pruebas unitarias
+    testCompile group: 'org.mockito', name:'mockito-core', version:'1.+' // Construccion de pruebas unitarias empleando mocks y stubs
+    // ***************** FIN PRUEBAS AUTOMATIZADAS ***************** //
+}
+
+
+jacoco {
+    toolVersion = "0.7.1.201405082137"
+    reportsDir = file("$buildDir/customJacocoReportDir")
+}
+
+test {
+	jacoco {
+		append = true
+		destinationFile = file("../ejemplos-practica-empresarial/build/jacoco/jacoco.exec")
+	}
+}
+
+task copyRes << {
+	['src/main/java', 'src/main/resources'].each { src ->
+    	copy {
+    		from src
+   			into 'build/classes'
+   			include('**/*.txt', '**/*.xml', '**/*.properties')
+    	}
+	}
+}
+
+jar {
+    archiveName = "ejemplos-practica-empresarial.jar"
+	/*from {
+        (configurations.compile).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }*/
+    manifest {
+    	def dateTime = new Date() 
+		attributes(
+			"Implementation-Title": "Ejemplos-Practica-Empresarial",
+			"Main-Class": "co.edu.udea.practicaempresarial.Application",
+			"Class-Path": "",
+		    "Creation-Date": dateTime.toTimestamp().toString(),
+            "Built-JDK": System.getProperty('java.version'),
+		)
+    }
+}
+
+compileJava.dependsOn(clean)
+test.dependsOn(copyRes)
+jacocoTestReport.dependsOn(test)
+jar.dependsOn(jacocoTestReport)
