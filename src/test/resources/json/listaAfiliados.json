@@ -1,0 +1,30 @@
+[
+  {
+    "tipoIdentificacion": "CC",
+    "numeroIdentificacion": "1037622083",
+    "primerApellido": "Garcia",
+    "primerNombre": "Andersson",
+    "segundoApellido": "Sotelo",
+    "diasCotizados": "3",
+    "salarioBasico": "1500000"
+  },
+  {
+    "tipoIdentificacion": "CC",
+    "numeroIdentificacion": "1039458953",
+    "primerApellido": "Buitrago",
+    "primerNombre": "Ana",
+    "segundoNombre": "Maria",
+    "segundoApellido": "Garzon",
+    "diasCotizados": "30",
+    "salarioBasico": "100000",
+    "codigoEps": "059"
+  },
+  {
+    "tipoIdentificacion": "TI",
+    "numeroIdentificacion": "92102229160",
+    "primerApellido": "Serna",
+    "primerNombre": "Stafanny",
+    "diasCotizados": "15",
+    "salarioBasico": "15000000"
+  }
+]

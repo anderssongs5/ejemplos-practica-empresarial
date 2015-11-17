@@ -10,6 +10,6 @@ Tecnologías, herramientas y configuración Windows:
 * Java JDK 1.8: Se utiliza la actualización 30 de Java JDK 1.8 y además se crea la variable de entorno JAVA_HOME, la cual hace referencia a la carpeta de instalación del mismo. Posteriormente se agrega a la variable Path: %JAVA_HOME%\bin
 
 Librerías: Todas las librerías utilizadas se obtienen desde el repositiorio Maven usando las dependencias de Gradle: 
-* Gson 2.2.2
+* Gson 2.2.2: Tutorial básico -> http://www.adictosaltrabajo.com/tutoriales/gson-java-json/#01
 * JUnit 4.+
 * Mockito-Core 1.+
