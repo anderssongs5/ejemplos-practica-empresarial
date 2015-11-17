@@ -116,7 +116,7 @@ public class SerializadorUT {
         assertEquals(((Afiliado) afiliados.get(1)).getDiasCotizados(), "30");
         assertEquals(((Afiliado) afiliados.get(1)).getPrimerNombre(), "Ana");
         assertEquals(((Afiliado) afiliados.get(1)).getSegundoApellido(), "Garzon");
-        assertEquals(((Afiliado) afiliados.get(2)).getPrimerNombre(), null);
+        assertEquals(((Afiliado) afiliados.get(2)).getSegundoNombre(), null);
         assertEquals(((Afiliado) afiliados.get(2)).getNumeroIdentificacion(), "92102229160");
         assertEquals(((Afiliado) afiliados.get(2)).getSegundoApellido(), null);
     }
