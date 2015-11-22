@@ -9,10 +9,10 @@ import rx.functions.Action1;
 
 public class EjemplosRxJava {
 
-    public static void ejemplo1() {
-        // En este ejemplo se crean observables a partir de una lista
-        // Se implementan métodos para poder notificar cuando
-        // finaliza la operación o cuando se produce un error.
+    // En este ejemplo se crean observables a partir de una lista
+    // Se implementan métodos para poder notificar cuando
+    // finaliza la operación o cuando se produce un error.
+    public static void ejemplo0() {
         List<String> list = Arrays.asList("One", "Two", "Three", "Four", "Five");
 
         Observable<String> observable = Observable.from(list);
