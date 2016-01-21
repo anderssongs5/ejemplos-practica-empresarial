@@ -7,13 +7,30 @@ import rx.Observable;
 import rx.functions.Action0;
 import rx.functions.Action1;
 
-public class EjemplosRxJava {
+public class EjemplosObservables {
+
+    private static List<String> list = Arrays.asList("One", "Two", "Three", "Four", "Five");
+
+    /*
+     * Ejemplo donde se crea un observable a partir de una lista. Se le dice a
+     * RxJava que estamos interesados en ese observable y que se quieren recibir
+     * notificaciones del mismo.
+     */
+    public static void ejemplo0() {
+        Observable<String> observable = Observable.from(list);
+        observable.subscribe(new Action1<String>() {
+            @Override
+            public void call(String t) {
+                System.out.println(t);
+            }
+
+        });
+    }
 
     // En este ejemplo se crean observables a partir de una lista
     // Se implementan métodos para poder notificar cuando
     // finaliza la operación o cuando se produce un error.
-    public static void ejemplo0() {
-        List<String> list = Arrays.asList("One", "Two", "Three", "Four", "Five");
+    public static void ejemplo1() {
 
         Observable<String> observable = Observable.from(list);
         observable.subscribe(
@@ -37,7 +54,7 @@ public class EjemplosRxJava {
                 new Action0() {
                     @Override
                     public void call() {
-                        System.out.println("We've finnished!");
+                        System.out.println("Hemos terminado!");
                     }
                 });
     }

@@ -57,11 +57,6 @@ test {
 
 jar {
     archiveName = "ejemplos-practica-empresarial.jar"
-	/*from {
-        (configurations.compile).collect {
-            it.isDirectory() ? it : zipTree(it)
-        }
-    }*/
     manifest {
     	def dateTime = new Date() 
 		attributes(
@@ -70,6 +65,8 @@ jar {
 		    "Creation-Date": dateTime.toTimestamp().toString(),
             "Built-JDK": System.getProperty('java.version'),
 		)
+		
+		from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     }
 }
 
