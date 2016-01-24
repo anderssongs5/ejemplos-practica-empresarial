@@ -3,6 +3,7 @@ package co.edu.udea.practicaempresarial;
 import co.edu.udea.practicaempresarial.java8lambdas.EjemplosSintaxis;
 import co.edu.udea.practicaempresarial.rx.EjemplosObservables;
 import co.edu.udea.practicaempresarial.rx.SumaReactivaV1;
+import co.edu.udea.practicaempresarial.rx.SumaReactivaV2;
 
 public class Aplicacion {
 
@@ -14,5 +15,7 @@ public class Aplicacion {
 //        SumaReactivaV1.correr();
 
         EjemplosSintaxis.correr();
+        
+        SumaReactivaV2.correr();
     }
 }
