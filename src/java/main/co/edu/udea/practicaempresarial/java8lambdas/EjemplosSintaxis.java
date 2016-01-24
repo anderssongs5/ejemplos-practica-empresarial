@@ -3,6 +3,9 @@ package co.edu.udea.practicaempresarial.java8lambdas;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
 
 public class EjemplosSintaxis {
 
@@ -57,5 +60,19 @@ public class EjemplosSintaxis {
         act(numbers, System.out::println);
         // Se utiliza método estático act y se utiliza expresión lambda.
         act(numbers, n -> System.out.println(n));
+
+        // Uso de interfaces funcionales propias de Java
+
+        Consumer<Object> print = System.out::println;
+        numbers.stream().forEach(n -> print.accept(n));
+
+        print.andThen(print).accept("Aquí voy!"); // 2x
+        
+        Function<Integer, String> toString = (value) -> (value + "!");
+        print.accept(toString.apply(1000));
+        
+        Predicate<Integer> odd = (value) -> (value % 2 != 0);
+        print.accept(odd.test(1));
+        print.accept(odd.test(6));
     }
 }
