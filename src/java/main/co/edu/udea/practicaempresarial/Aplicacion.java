@@ -1,5 +1,7 @@
 package co.edu.udea.practicaempresarial;
 
+import co.edu.udea.practicaempresarial.functions.FuncionesOrdenSuperior;
+import co.edu.udea.practicaempresarial.functions.FuncionesPuras;
 import co.edu.udea.practicaempresarial.java8lambdas.EjemplosSintaxis;
 import co.edu.udea.practicaempresarial.rx.EjemplosObservables;
 import co.edu.udea.practicaempresarial.rx.SumaReactivaV1;
@@ -16,6 +18,13 @@ public class Aplicacion {
 
         EjemplosSintaxis.correr();
         
-        SumaReactivaV2.correr();
+//        SumaReactivaV2.correr();
+        
+        FuncionesPuras.pureEven();        
+        FuncionesPuras.impureEven();
+        
+        FuncionesOrdenSuperior.probarHighSum();
+        FuncionesOrdenSuperior.probarHighSumDiferente();
+        FuncionesOrdenSuperior.probarSaludar();
     }
 }
