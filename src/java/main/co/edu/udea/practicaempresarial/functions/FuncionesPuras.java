@@ -12,7 +12,7 @@ public class FuncionesPuras {
         }
     }
 
-    /* Una función no pura es aquella que tiene efectos secundarios y su
+    /* Una función pura es aquella que no tiene efectos secundarios y su
      * valor de retorno está solo determinado por su entrada.
      * 
      * Un efecto secundario es cualquier posible salida observable que una
