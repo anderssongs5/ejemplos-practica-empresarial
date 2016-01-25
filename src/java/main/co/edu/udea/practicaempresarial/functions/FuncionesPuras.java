@@ -12,14 +12,19 @@ public class FuncionesPuras {
         }
     }
 
-    /* Una función pura es aquella que no tiene efectos secundarios y su
-     * valor de retorno está solo determinado por su entrada.
+    /*
+     * Una función pura es aquella que no tiene efectos secundarios y su valor
+     * de retorno está solo determinado por su entrada.
      * 
      * Un efecto secundario es cualquier posible salida observable que una
-     * función puede producir, por ejemplo, provocar eventos o lanzar 
-     * excepciones y I/O, diferente de su valor de retorno. Un efecto
-     * secundario también cambia estados compartidos o argumentos mutables.
-     * */
+     * función puede producir, por ejemplo, provocar eventos o lanzar
+     * excepciones y I/O, diferente de su valor de retorno. Un efecto secundario
+     * también cambia estados compartidos o argumentos mutables.
+     * 
+     * La siguiente función es no pura porque imprime un mensaje cada vez que es
+     * llamada. Así, ésta hace dos cosas: prueba si el número es par, e imprime
+     * un mensaje como un efecto secundario.
+     */
     public static void impureEven() {
         Predicate<Integer> even = (number) -> {
             System.out.println("Pintar acá es un efecto secundario!");
