@@ -28,8 +28,8 @@ public class UsoDatosInicialesUT {
 
         DatosIniciales datosInicialesSingleton = PowerMockito.mock(DatosIniciales.class);
         Mockito.when(DatosIniciales.getInstance()).thenReturn(datosInicialesSingleton);
-        Mockito.when(datosInicialesSingleton.getDniIngresa()).thenReturn("C1037622083");
+        Mockito.when(datosInicialesSingleton.getDniIngresa()).thenReturn("C123456789");
 
-        assertEquals("C1037622083", sut.getDniIngresa());
+        assertEquals("C123456789", sut.getDniIngresa());
     }
 }

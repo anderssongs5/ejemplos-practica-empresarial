@@ -2,7 +2,7 @@
     "afiliados": [
         {
             "tipoIdentificacion": "CC",
-            "numeroIdentificacion": "1037622083",
+            "numeroIdentificacion": "123456789",
             "primerApellido": "Garcia",
             "primerNombre": "Andersson",
             "segundoApellido": "Sotelo",
@@ -11,7 +11,7 @@
         },
         {
             "tipoIdentificacion": "CC",
-            "numeroIdentificacion": "1039458953",
+            "numeroIdentificacion": "987654321",
             "primerApellido": "Buitrago",
             "primerNombre": "Ana",
             "segundoNombre": "Maria",
@@ -22,7 +22,7 @@
         },
         {
             "tipoIdentificacion": "TI",
-            "numeroIdentificacion": "92102229160",
+            "numeroIdentificacion": "369852147",
             "primerApellido": "Serna",
             "primerNombre": "Stafanny",
             "diasCotizados": "15",

@@ -36,7 +36,7 @@ public class SeccionBAdaptadorUT {
 
         assertNotNull(afiliado);
         assertEquals(afiliado.getTipoIdentificacion(), "CC");
-        assertEquals(afiliado.getNumeroIdentificacion(), "1037622083");
+        assertEquals(afiliado.getNumeroIdentificacion(), "123456789");
         assertEquals(afiliado.getPrimerApellido(), "Garcia");
         assertEquals(afiliado.getPrimerNombre(), "Andersson");
         assertEquals(afiliado.getSegundoApellido(), "Sotelo");

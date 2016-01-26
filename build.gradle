@@ -12,18 +12,18 @@ targetCompatibility = 1.8
 sourceSets{
 	main {
 		java {
-			srcDir 'src'
+			srcDir 'src/java/main'
 		}
 		resources {
-			srcDir 'src/main/resources'
+			srcDir 'src/java/resources'
 		}
 	}
 	test{
 		java {
-			srcDir 'srcTests'
+			srcDir 'src/test/java'
 		}
 		resources {
-			srcDir 'srcTestsRes'
+			srcDir 'src/test/resources'
 		}
 	}
 }
@@ -42,10 +42,9 @@ dependencies {
     // ***************** FIN PRUEBAS AUTOMATIZADAS ***************** //
 }
 
-
 jacoco {
-    toolVersion = "0.7.1.201405082137"
-    reportsDir = file("$buildDir/customJacocoReportDir")
+    toolVersion = "0.7.1.201405082137"    
+    reportsDir = file("$buildDir/reporte-jacoco")
 }
 
 test {
@@ -61,13 +60,13 @@ jar {
     	def dateTime = new Date() 
 		attributes(
 			"Implementation-Title": "Ejemplos-Practica-Empresarial",
-			"Main-Class": "co.edu.udea.practicaempresarial.Application",
+			"Main-Class": "co.edu.udea.practicaempresarial.Aplication",
 		    "Creation-Date": dateTime.toTimestamp().toString(),
             "Built-JDK": System.getProperty('java.version'),
 		)
-		
-		from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     }
+		
+	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
 compileJava.dependsOn(clean)

@@ -57,7 +57,7 @@ public class SerializadorUT {
         assertEquals(seccionA.getNombreAportante(), "ANDERSSONGARCIASOTELO");
         assertEquals(seccionA.getMesCotizacion(), "09");
         assertEquals(seccionA.getTipoDocumentoAportante(), "CC");
-        assertEquals(seccionA.getNumeroDocumentoAportante(), "1037622083");
+        assertEquals(seccionA.getNumeroDocumentoAportante(), "123456789");
         assertEquals(seccionA.getTipoAportante(), "2");
         assertEquals(seccionA.getEmail(), "ANDERSSONGARCIASOTELO@GMAIL.COM");
         assertEquals(seccionA.getDiaFechaPago(), "01");
@@ -88,7 +88,7 @@ public class SerializadorUT {
         seccionA.setNombreAportante("ANDERSSONGARCIASOTELO");
         seccionA.setMesCotizacion("09");
         seccionA.setTipoDocumentoAportante("CC");
-        seccionA.setNumeroDocumentoAportante("1037622083");
+        seccionA.setNumeroDocumentoAportante("123456789");
         seccionA.setTipoAportante("2");
         seccionA.setEmail("ANDERSSONGARCIASOTELO@GMAIL.COM");
         seccionA.setDiaFechaPago("01");
@@ -117,7 +117,7 @@ public class SerializadorUT {
         assertEquals(((Afiliado) afiliados.get(1)).getPrimerNombre(), "Ana");
         assertEquals(((Afiliado) afiliados.get(1)).getSegundoApellido(), "Garzon");
         assertEquals(((Afiliado) afiliados.get(2)).getSegundoNombre(), null);
-        assertEquals(((Afiliado) afiliados.get(2)).getNumeroIdentificacion(), "92102229160");
+        assertEquals(((Afiliado) afiliados.get(2)).getNumeroIdentificacion(), "369852147");
         assertEquals(((Afiliado) afiliados.get(2)).getSegundoApellido(), null);
     }
 
