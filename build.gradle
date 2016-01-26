@@ -60,7 +60,7 @@ jar {
     	def dateTime = new Date() 
 		attributes(
 			"Implementation-Title": "Ejemplos-Practica-Empresarial",
-			"Main-Class": "co.edu.udea.practicaempresarial.Aplication",
+			"Main-Class": "co.edu.udea.practicaempresarial.Aplicacion",
 		    "Creation-Date": dateTime.toTimestamp().toString(),
             "Built-JDK": System.getProperty('java.version'),
 		)
