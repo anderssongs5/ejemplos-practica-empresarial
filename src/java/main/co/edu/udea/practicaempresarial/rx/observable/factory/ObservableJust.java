@@ -39,7 +39,7 @@ public class ObservableJust {
     }
 
     private static void pintarUsuario() {
-        Observable.just(new Usuario("", "")).map(u -> u.getNombre() + " " + u.getApellidos())
+        Observable.just(new Usuario("Andersson", "García Sotelo")).map(u -> u.getNombre() + " " + u.getApellidos())
                 .subscribe(System.out::println);
     }
 

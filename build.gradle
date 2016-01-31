@@ -35,11 +35,11 @@ repositories {
 dependencies {
 	compile group:'io.reactivex', name:'rxjava', version: '1.0.14' // Libreria para programacion reactiva
 	compile group:'com.google.code.gson', name: 'gson', version: '2.2.2' // Serializacion de datos
-	
-	// ***************** PRUEBAS AUTOMATIZADAS ***************** //
+
+	// ************************** PRUEBAS AUTOMATIZADAS ************************** //
 	testCompile group: 'org.powermock', name:'powermock-module-junit4', version:'1.+'
 	testCompile group: 'org.powermock', name:'powermock-api-mockito', version:'1.+'
-	// ***************** FIN PRUEBAS AUTOMATIZADAS ***************** //
+	// *********************** FIN PRUEBAS AUTOMATIZADAS *********************** //
 }
 
 jacoco {
