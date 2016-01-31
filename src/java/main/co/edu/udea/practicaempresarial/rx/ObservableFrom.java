@@ -10,6 +10,12 @@ import java.util.List;
 
 import rx.Observable;
 
+/*
+ * Creación de observables usando método from con el
+ * objetivo de crear observables a partir de otras fuentes.
+ * Se crean los observables a partir de objetos que
+ * implementan Iterable.
+ * */
 public class ObservableFrom {
 
     private static void crearDesdeLista() {
