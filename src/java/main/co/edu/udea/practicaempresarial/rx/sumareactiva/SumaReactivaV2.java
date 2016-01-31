@@ -1,4 +1,4 @@
-package co.edu.udea.practicaempresarial.rx;
+package co.edu.udea.practicaempresarial.rx.sumareactiva;
 
 import java.util.regex.Pattern;
 

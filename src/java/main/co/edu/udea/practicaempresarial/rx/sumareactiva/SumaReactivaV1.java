@@ -1,4 +1,4 @@
-package co.edu.udea.practicaempresarial.rx;
+package co.edu.udea.practicaempresarial.rx.sumareactiva;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.regex.Matcher;

@@ -1,4 +1,4 @@
-package co.edu.udea.practicaempresarial.rx;
+package co.edu.udea.practicaempresarial.rx.observable.factory;
 
 import rx.Observable;
 
