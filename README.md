@@ -11,6 +11,6 @@ Tecnologías, herramientas y configuración Windows:
 
 Librerías: Todas las librerías utilizadas se obtienen desde el repositiorio Maven usando las dependencias de Gradle: 
 * Gson 2.2.2: Tutorial básico -> http://www.adictosaltrabajo.com/tutoriales/gson-java-json/#01
-* JUnit 4.+
-* Mockito-Core 1.+
+* PowerMock-Module-JUnit4 1.+
+* PowerMock-API-Mockito 1.+
 * RxJava 1.0.14: Libro recomendado -> Learning Reactive Programming with Java 8
