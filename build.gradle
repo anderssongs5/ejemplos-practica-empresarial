@@ -29,7 +29,7 @@ sourceSets{
 }
 
 repositories {
-    mavenCentral()
+	mavenCentral()
 }
 
 dependencies {
@@ -37,14 +37,14 @@ dependencies {
 	compile group:'com.google.code.gson', name: 'gson', version: '2.2.2' // Serializacion de datos
 	
 	// ***************** PRUEBAS AUTOMATIZADAS ***************** //
-    testCompile group: 'org.powermock', name:'powermock-module-junit4', version:'1.+'
-    testCompile group: 'org.powermock', name:'powermock-api-mockito', version:'1.+'
-    // ***************** FIN PRUEBAS AUTOMATIZADAS ***************** //
+	testCompile group: 'org.powermock', name:'powermock-module-junit4', version:'1.+'
+	testCompile group: 'org.powermock', name:'powermock-api-mockito', version:'1.+'
+	// ***************** FIN PRUEBAS AUTOMATIZADAS ***************** //
 }
 
 jacoco {
-    toolVersion = "0.7.1.201405082137"    
-    reportsDir = file("$buildDir/reporte-jacoco")
+	toolVersion = "0.7.1.201405082137"    
+	reportsDir = file("$buildDir/reporte-jacoco")
 }
 
 test {
@@ -64,8 +64,8 @@ jar {
 			"Creation-Date": dateTime.toTimestamp().toString(),
 			"Built-JDK": System.getProperty('java.version'),
 		)
-    }
-		
+	}
+
 	from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
 }
 
