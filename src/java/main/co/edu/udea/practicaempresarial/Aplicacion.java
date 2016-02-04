@@ -5,6 +5,7 @@ import co.edu.udea.practicaempresarial.functions.FuncionesPuras;
 import co.edu.udea.practicaempresarial.java8lambdas.EjemplosSintaxis;
 import co.edu.udea.practicaempresarial.rx.EjemplosObservables;
 import co.edu.udea.practicaempresarial.rx.general.CreadorObservables;
+import co.edu.udea.practicaempresarial.rx.observable.factory.ObservableCreate;
 import co.edu.udea.practicaempresarial.rx.observable.factory.ObservableFrom;
 import co.edu.udea.practicaempresarial.rx.observable.factory.ObservableJust;
 import co.edu.udea.practicaempresarial.rx.observable.factory.OtherObservableFactoryMethods;
@@ -34,5 +35,7 @@ public class Aplicacion {
         ObservableFrom.correr();
         ObservableJust.correr();
         OtherObservableFactoryMethods.correr();
+
+        ObservableCreate.correr();
     }
 }
