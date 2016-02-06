@@ -10,7 +10,7 @@ import rx.Subscriber;
 
 public class ObservableCreate {
 
-    private static <T> Observable<T> desdeIterator(final Iterable<T> iterable) {
+    private static <T> Observable<T> desdeIterator1(final Iterable<T> iterable) {
         return Observable.create(new OnSubscribe<T>() {
             @Override
             public void call(Subscriber<? super T> t) {
@@ -30,7 +30,7 @@ public class ObservableCreate {
     }
 
     public static void correr() {
-        List<String> numeros = Arrays.asList("1", "2", "3", "4", "5");
-        desdeIterator(numeros).subscribe(System.out::println);
+        List<String> numeros = Arrays.asList("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
+        desdeIterator1(numeros).subscribe(System.out::println);
     }
 }
