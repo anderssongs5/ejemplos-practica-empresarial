@@ -8,10 +8,11 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import co.edu.udea.practicaempresarial.rx.general.Helper;
 import rx.Observable;
+import rx.Observable.OnSubscribe;
 import rx.Subscriber;
 import rx.Subscription;
-import rx.Observable.OnSubscribe;
 import rx.schedulers.Schedulers;
 
 public class EjemploConUnsubscribe {
@@ -43,13 +44,6 @@ public class EjemploConUnsubscribe {
         });
     }
 
-    private static <T> Subscription suscribirseImprimir(Observable<T> observable, String nombre) {
-        return observable.subscribe((v) -> System.out.println(nombre + ": " + v), (e) -> {
-            System.err.println("Error desde " + nombre + ":");
-            System.err.println(e.getMessage());
-        } , () -> System.out.println(nombre + " terminó!"));
-    }
-
     public static void correr() {
         Path path = Paths.get("src", "java", "resources", "lorem_big.txt");
         List<String> filas = new ArrayList<>();
@@ -60,7 +54,7 @@ public class EjemploConUnsubscribe {
             return;
         }
         Observable<String> numerosObservable = desdeIterator2(filas).subscribeOn(Schedulers.computation());
-        Subscription subscription = suscribirseImprimir(numerosObservable, "Fila");
+        Subscription subscription = Helper.suscribirseImprimir(numerosObservable, "Fila");
         System.out.println("Antes de 'unsubscribed'");
         System.out.println("------------------");
         try {
