@@ -13,7 +13,7 @@ import rx.Subscription;
  * El método publish() puede convertir cualquier "cold observable" en un
  * "hot observable".
  * */
-public class ConnectableObservable {
+public class ConnectableObservableExample {
 
     /*
      * Se crea un observable de intervao y a partir de él, un
