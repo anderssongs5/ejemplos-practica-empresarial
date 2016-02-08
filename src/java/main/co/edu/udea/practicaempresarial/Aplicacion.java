@@ -42,9 +42,5 @@ public class Aplicacion {
         // ObservableCreate.correr();
         //
         // ConnectableObservableExample.correr();
-
-        SubjectExample.correr();
-
-        SumaReactivaV3.correr();
     }
 }

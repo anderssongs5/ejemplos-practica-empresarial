@@ -42,7 +42,7 @@ public class SumaReactivaV3 {
         }
     }
 
-    public static void correr() {
+    public static void main(String args[]) {
         SumaReactivaBehaviorSubject sumaReactiva = new SumaReactivaBehaviorSubject();
 
         Helper.suscribirseImprimir(sumaReactiva.obsC(), "Suma Reactiva");

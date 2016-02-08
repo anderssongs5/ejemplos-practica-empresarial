@@ -45,7 +45,7 @@ public class SubjectExample {
         subscription3.unsubscribe();
     }
 
-    public static void correr() {
+    public static void main(String args[]) {
         subjectAsObservable1();
     }
 }
