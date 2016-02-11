@@ -1,6 +1,8 @@
 package co.edu.udea.practicaempresarial.rx.reactiveoperators;
 
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.concurrent.TimeUnit;
 
 import co.edu.udea.practicaempresarial.rx.general.CreadorObservables;
 import co.edu.udea.practicaempresarial.rx.general.Helper;
@@ -49,7 +51,38 @@ public class Mapping {
         Helper.suscribirseImprimir(filesObservable, "Archivos Observables");
     }
 
-    public static void main(String args[]) {
+    private static void flatIterableMapped1() {
+        System.out.println("Flat Iterable Mapped 1");
+        Observable<?> flatIterableMapped = Observable.just(Arrays.asList(2, 4), Arrays.asList("Dos", "Cuatro"))
+                .flatMapIterable(n -> n);
+        Helper.suscribirseImprimir(flatIterableMapped, "Flat Iterable Mapped");
+    }
+
+    private static void flatIterableMapped2() {
+        System.out.println("Flat Iterable Mapped 2");
+        Observable<?> flatIterableMapped = Observable.just(Arrays.asList(2, 4), Arrays.asList("Dos", "Cuatro"))
+                .flatMap(n -> Observable.from(n));
+        Helper.suscribirseImprimir(flatIterableMapped, "Flat Iterable Mapped");
+    }
+
+    private static void concatMap1() {
+        System.out.println("Concat Map 1");
+        Observable<String> concatMapped = Helper
+                .listarCarpetas(Paths.get("src", "java", "resources"), "{lorem.txt,letters.txt}")
+                .concatMap(ruta -> CreadorObservables.from(ruta));
+        Helper.suscribirseImprimir(concatMapped, "Concat Map");
+    }
+
+    @SuppressWarnings("deprecation")
+    private static void switchMap1() {
+        System.out.println("Switch Map 1");
+        Observable<String> switchMap = Observable.interval(40L, TimeUnit.MILLISECONDS).switchMap(v -> Observable
+                .timer(0L, 10L, TimeUnit.MILLISECONDS).map(n -> ("Observable <" + (v + 1) + "> : " + (v + n))));
+
+        Helper.suscribirseImprimir(switchMap, "Switch Map");
+    }
+
+    public static void main(String args[]) throws InterruptedException {
         map1();
 
         flatMap1();
@@ -59,5 +92,19 @@ public class Mapping {
         flatMap3();
 
         flatMap4();
+
+        flatIterableMapped1();
+
+        Thread.sleep(2000);
+
+        flatIterableMapped2();
+
+        Thread.sleep(2000);
+
+        concatMap1();
+
+        switchMap1();
+
+        Thread.sleep(5000);
     }
 }
