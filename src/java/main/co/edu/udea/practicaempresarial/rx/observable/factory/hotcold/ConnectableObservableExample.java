@@ -119,7 +119,7 @@ public class ConnectableObservableExample {
         subscription3.unsubscribe();
     }
 
-    public static void correr() {
+    public static void main(String args[]) {
         connectableObservable1();
 
         connectableObservable2();

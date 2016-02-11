@@ -4,7 +4,7 @@ import java.util.function.Predicate;
 
 public class FuncionesPuras {
 
-    public static void pureEven() {
+    private static void pureEven() {
         Predicate<Integer> even = value -> (value % 2 == 0);
         int i = 50;
         while ((i--) > 0) {
@@ -25,7 +25,7 @@ public class FuncionesPuras {
      * llamada. Así, ésta hace dos cosas: prueba si el número es par, e imprime
      * un mensaje como un efecto secundario.
      */
-    public static void impureEven() {
+    private static void impureEven() {
         Predicate<Integer> even = (number) -> {
             System.out.println("Pintar acá es un efecto secundario!");
             return number % 2 == 0;
@@ -35,5 +35,10 @@ public class FuncionesPuras {
         while ((i--) > 0) {
             System.out.println("Es par? : " + even.test(5));
         }
+    }
+
+    public static void main(String args[]) {
+        pureEven();
+        impureEven();
     }
 }

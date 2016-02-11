@@ -87,7 +87,7 @@ public class SumaReactivaV1 {
         });
     }
 
-    public static void correr() {
+    public static void main(String args[]) {
         ConnectableObservable<String> input = CreadorObservables.from(System.in);
 
         Observable<Double> a = obtenerValorStream("a", input);

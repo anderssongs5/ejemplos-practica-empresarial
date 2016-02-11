@@ -58,4 +58,10 @@ public class EjemplosObservables {
                     }
                 });
     }
+
+    public static void main(String args[]) {
+        EjemplosObservables.ejemplo0();
+
+        EjemplosObservables.ejemplo1();
+    }
 }

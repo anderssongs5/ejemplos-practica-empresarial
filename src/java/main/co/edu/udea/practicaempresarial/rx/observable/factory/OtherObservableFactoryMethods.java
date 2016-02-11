@@ -14,7 +14,7 @@ public class OtherObservableFactoryMethods {
     }
 
     @SuppressWarnings("deprecation")
-    public static void correr() throws InterruptedException {
+    public static void main(String args[]) throws InterruptedException {
         /*
          * Con Observable.interval se obtiene un observable que emite un número
          * secuencial cada intervalo de tiempo especificado.

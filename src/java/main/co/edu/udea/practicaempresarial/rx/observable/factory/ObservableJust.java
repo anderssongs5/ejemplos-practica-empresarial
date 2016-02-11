@@ -43,7 +43,7 @@ public class ObservableJust {
                 .subscribe(System.out::println);
     }
 
-    public static void correr() {
+    public static void main(String args[]) {
         emitirLetra();
 
         emitirLetras();
