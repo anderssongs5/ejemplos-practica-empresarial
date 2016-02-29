@@ -41,5 +41,8 @@ public class MultiplesOperadores {
 
         Observable<String> f7 = f6.last();
         Helper.suscribirseImprimir(f7, "F7");
+
+        Observable<String> f8 = f7.map(t -> t + ".");
+        Helper.suscribirseImprimir(f8, "F8");
     }
 }
