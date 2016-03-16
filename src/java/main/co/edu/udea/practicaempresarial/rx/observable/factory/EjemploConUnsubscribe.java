@@ -44,7 +44,7 @@ public class EjemploConUnsubscribe {
         });
     }
 
-    public static void correr() {
+    public static void correr(String args[]) {
         Path path = Paths.get("src", "java", "resources", "lorem_big.txt");
         List<String> filas = new ArrayList<>();
         try {
