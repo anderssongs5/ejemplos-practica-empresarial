@@ -35,7 +35,7 @@ public class EjemplosObservables {
         Observable<String> observable = Observable.from(list);
         observable.subscribe(
                 // Se ejecuta cada vez que se tiene un valor,
-                // listo para ser empujado o nitificado
+                // listo para ser empujado o notificado
                 new Action1<String>() {
                     @Override()
                     public void call(String element) {

@@ -11,7 +11,6 @@ import rx.Subscription;
 import rx.functions.Func1;
 import rx.functions.Func2;
 import rx.observables.ConnectableObservable;
-import rx.schedulers.Schedulers;
 
 public class SumaReactivaV1 {
 
@@ -33,7 +32,7 @@ public class SumaReactivaV1 {
                 public Double call(Double a, Double b) {
                     return a + b;
                 }
-            }).subscribeOn(Schedulers.io()).subscribe(this);
+            }).subscribe(this);
         }
 
         public void unsubscribe() {
