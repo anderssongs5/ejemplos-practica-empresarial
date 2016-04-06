@@ -10,7 +10,7 @@ public class OtherObservableFactoryMethods {
         observable.subscribe((v) -> System.out.println(nombre + ": " + v), (e) -> {
             System.err.println("Error desde " + nombre + ":");
             System.err.println(e.getMessage());
-        } , () -> System.out.println(nombre + " terminó!"));
+        }, () -> System.out.println(nombre + " terminó!"));
     }
 
     @SuppressWarnings("deprecation")
@@ -26,19 +26,19 @@ public class OtherObservableFactoryMethods {
          * después del retardo inicial y cada vez más números después de cada
          * período de tiempo a partir de entonces.
          */
-        suscribirseImprimir(Observable.timer(0L, 1L, TimeUnit.SECONDS), "Observable de intervalo de tiempo");
+        suscribirseImprimir(Observable.timer(3L, 1L, TimeUnit.SECONDS), "Observable de intervalo de tiempo");
 
         /*
          * Observable.timer(?, ?) retorna un observable que emite un ítem
          * después del retardo especificado, y luego finaliza.
          */
-        suscribirseImprimir(Observable.timer(1L, TimeUnit.SECONDS), "Observable timer");
+        suscribirseImprimir(Observable.timer(2L, TimeUnit.SECONDS), "Observable timer");
 
         /*
          * Observable.error retorna un observable que invoca el método de error
          * (onError) del observador cuando el observador se suscribe a él.
          */
-        suscribirseImprimir(Observable.error(new Exception("Error de prueba!")), "Observable error");
+        suscribirseImprimir(Observable.error(new Exception("Prueba de observable con error!")), "Observable error");
 
         /*
          * Observer.empty devuelve un observable que no emite ítems e
@@ -55,7 +55,7 @@ public class OtherObservableFactoryMethods {
          * Observable.range retorna un observable que emite una secuencia de
          * números enteros dentro de un rango especificado.
          */
-        suscribirseImprimir(Observable.range(1, 3), "Observable de rango");
+        suscribirseImprimir(Observable.range(50, 100), "Observable de rango");
 
         Thread.sleep(5000L);
     }

@@ -34,7 +34,7 @@ public class ObservableJust {
     }
 
     private static void emitirLetras() {
-        Observable.just("R", "x", "J", "a", "v", "a").subscribe(System.out::print, System.out::println,
+        Observable.just("R", "x", " ", "J", "a", "v", "a").subscribe(System.out::print, System.err::println,
                 System.out::println);
     }
 
