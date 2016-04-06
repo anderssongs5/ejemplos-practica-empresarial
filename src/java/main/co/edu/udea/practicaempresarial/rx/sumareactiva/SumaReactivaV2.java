@@ -24,7 +24,7 @@ public class SumaReactivaV2 {
                 .subscribe(sum -> System.out.println("Actualización: a + b = " + sum), error -> {
                     System.out.println("Se presentó error!");
                     error.printStackTrace();
-                } , () -> System.out.println("Saliendo"));
+                } , () -> System.out.println("Saliendo..."));
     }
 
     public static void main(String args[]) {
